@@ -10,14 +10,17 @@ const BannerSlider: React.FC = () => {
           className="w-full h-full object-cover shadow-xl mx-auto rounded-lg"
         />
       </div>
-      <div className="md:w-4/12 p-3 md:flex md:justify-center md:items-center mx-auto">
+      <div className="md:w-4/12 md:flex md:justify-center md:items-center mx-auto">
         <div>
-          <h2 className="font-bold text-2xl">Banner Heading Text</h2>
+          <h2 className="font-bold text-xl mb-3">Why Eco-Friendly Products Are Worth It</h2>
           <p className="text-gray-400">
-            Banner Description Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Inventore error illum laboriosam eos, unde alias
-            facilis nisi a expedita quas, illo, laudantium libero consequuntur
-            recusandae! Facilis fugit cumque aperiam laudantium!
+            Eco-friendly products benefit you and the planet. They reduce
+            pollution, waste, and toxins, improving air and water quality. Plus,
+            they're often made from recycled materials and support sustainable
+            businesses. While some may be costlier upfront, they can last longer
+            and save you money in the long run. Choosing eco-friendly products
+            is an investment in your health and the future of our planet. Start
+            small and make a difference!
           </p>
         </div>
       </div>
