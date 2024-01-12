@@ -46,12 +46,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ productImage }) => {
 
       <div className="flex content-between">
         <div className="flex items-center mb-2 mr-auto">
-          <label className="mr-2">
-            Quantity:
-          </label>
-          <select
-            className="border border-gray-300 rounded-md p-1"
-          >
+          <label className="mr-2">Quantity:</label>
+          <select className="border border-gray-300 rounded-md p-1">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -59,7 +55,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ productImage }) => {
             <option value="5">5</option>
           </select>
         </div>
-        <Button>Add to cart</Button>
+        <Button>Add to Cart</Button>
       </div>
     </div>
   );
