@@ -1,15 +1,12 @@
 import React from "react";
-import MainHeader from "../../components/MainHeader";
 import BannerSlider from "./sections/BannerSlider";
 import SearchProducts from "./sections/SearchProducts";
 import FilterProducts from "./sections/FilterProducts";
 import ProductType from "./sections/ProductType";
-import MainFooter from "../../components/MainFooter";
 
 const HomePage: React.FC = () => {
   return (
     <>
-      <MainHeader />
       <main>
         <BannerSlider />
         <section className="flex justify-between px-5 py-5">
@@ -24,7 +21,6 @@ const HomePage: React.FC = () => {
           <ProductType name={"Eco Products"} description={"All types of Eco Products"} productType="Eco Product" />
         </section>
       </main>
-      <MainFooter />
     </>
   );
 };

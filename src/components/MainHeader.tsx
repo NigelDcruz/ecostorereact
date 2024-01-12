@@ -19,7 +19,7 @@ const MainHeader: React.FC = () => {
          
           <li>
             <Link
-              to="/product-detail/test"
+              to="/notifications"
               className="text-sm font-semibold leading-6  text-green-600 flex gap-2 relative"
             >
               <img src={notificationIcon} alt="Cart Icon" className="h-7 w-6" />
@@ -29,7 +29,7 @@ const MainHeader: React.FC = () => {
           </li>
           <li>
             <Link
-              to="/product-detail/test"
+              to="/cart"
               className="text-sm font-semibold leading-6  text-green-600 flex gap-2 relative"
             >
               <img src={cartIcon} alt="Cart Icon" className="h-7 w-7" />
@@ -39,43 +39,43 @@ const MainHeader: React.FC = () => {
           <li className="relative group cursor-pointer">
             <img src={userIcon} alt="User Profile" className="h-7 w-7" />
 
-            <ul className="border group-hover:absolute rounded-lg hidden  group-hover:block top-[28px] right-0 bg-white w-[120px]">
+            <ul className="border group-hover:absolute rounded-lg hidden  group-hover:block top-[28px] right-0 bg-white w-[160px]">
               <li>
                 <Link
-                  to="/product-detail/test"
-                  className="text-sm font-semibold leading-6  text-green-600 block py-1 px-3 hover:bg-[var(--primary-color)] hover:text-white"
+                  to="/dashboard"
+                  className="text-sm font-semibold leading-6  text-green-600 block py-2 px-5 hover:bg-[var(--primary-color)] hover:text-white"
                 >
                   Dashboard
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/product-detail/test"
-                  className="text-sm font-semibold leading-6  text-green-600 block py-1 px-3 hover:bg-[var(--primary-color)] hover:text-white"
+                  to="/settings"
+                  className="text-sm font-semibold leading-6  text-green-600 block py-2 px-5 hover:bg-[var(--primary-color)] hover:text-white"
                 >
                   Settings
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/product-detail/test"
-                  className="text-sm font-semibold leading-6  text-green-600 block py-1 px-3 hover:bg-[var(--primary-color)] hover:text-white"
+                  to="/"
+                  className="text-sm font-semibold leading-6  text-green-600 block py-2 px-5 hover:bg-[var(--primary-color)] hover:text-white"
                 >
                   Log Out
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/product-detail/test"
-                  className="text-sm font-semibold leading-6  text-green-600 block py-1 px-3 hover:bg-[var(--primary-color)] hover:text-white"
+                  to="/register"
+                  className="text-sm font-semibold leading-6  text-green-600 block py-2 px-5 hover:bg-[var(--primary-color)] hover:text-white"
                 >
                   Register
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/product-detail/test"
-                  className="text-sm font-semibold leading-6  text-green-600 block py-1 px-3 hover:bg-[var(--primary-color)] hover:text-white"
+                  to="/login"
+                  className="text-sm font-semibold leading-6  text-green-600 block py-2 px-5 hover:bg-[var(--primary-color)] hover:text-white"
                 >
                   Log In
                 </Link>

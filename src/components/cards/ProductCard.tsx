@@ -11,9 +11,8 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ productImage }) => {
   const [isFavourite, setIsFavourite] = useState(false);
 
-  const handleAddToFavourite = () => {};
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 w-[300px] border relative">
+    <div className="bg-white rounded-lg shadow-md p-4 w-full md:w-[300px] border relative">
       {isFavourite ? (
         <img
           src={heartRedIcon}
