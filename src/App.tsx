@@ -6,13 +6,13 @@ import ProductDetail from "./pages/Product/ProductDetailPage";
 import LoginPage from "./pages/Auth/Login";
 import RegisterPage from "./pages/Auth/Register";
 import DashboardPage from "./pages/Dashboard/Dashboard";
-import SettingsPage from "./pages/User/Settings";
+import SettingsPage from "./pages/Dashboard/Settings";
 import ProductsPage from "./pages/Product/Products";
 import CartPage from "./pages/Cart/Cart";
 import CheckOutPage from "./pages/Cart/Checkout";
 import ConfirmationPage from "./pages/Cart/Confirmation";
 import PaymentPage from "./pages/Cart/Payment";
-import NotificationsPage from "./pages/User/NotificationsPage";
+import NotificationsPage from "./pages/Dashboard/NotificationsPage";
 import MainHeader from "./components/MainHeader";
 import MainFooter from "./components/MainFooter";
 
