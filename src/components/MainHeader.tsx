@@ -50,14 +50,6 @@ const MainHeader: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/settings"
-                  className="text-sm font-semibold leading-6  text-green-600 block py-2 px-5 hover:bg-[var(--primary-color)] hover:text-white"
-                >
-                  Settings
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/"
                   className="text-sm font-semibold leading-6  text-green-600 block py-2 px-5 hover:bg-[var(--primary-color)] hover:text-white"
                 >
