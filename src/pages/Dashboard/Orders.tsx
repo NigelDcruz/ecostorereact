@@ -20,92 +20,92 @@ const Orders: React.FC = () => {
         </thead>
         <tbody>
           <tr>
-            <td className="py-3 px-3 text-left">#1234</td>
-            <td className="py-3 px-3 text-left flex items-center">
+            <td className="border-b py-3 px-3 text-left">#1234</td>
+            <td className="border-b py-3 px-3 text-left flex items-center">
               <img src={dummyFoodImage} alt="Product Image" className="h-14 border mr-3" />
               Coconut Oil
             </td>
-            <td className="py-3 px-3 text-left">Eco Food</td>
-            <td className="py-3 px-3 text-left">$300</td>
-            <td className="py-3 px-3 text-left font-bold">2</td>
-            <td className="py-3 px-3 text-left"> <span className="inline-block bg-green-600 text-white rounded-md px-4 text- py-1">Delivered</span> </td>
+            <td className="border-b py-3 px-3 text-left">Eco Food</td>
+            <td className="border-b py-3 px-3 text-left">$300</td>
+            <td className="border-b py-3 px-3 text-left font-bold">2</td>
+            <td className="border-b py-3 px-3 text-left"> <span className="inline-block bg-green-600 text-white rounded-md px-4 text- py-1">Delivered</span> </td>
           </tr>
           <tr>
-            <td className="py-3 px-3 text-left">#1234</td>
-            <td className="py-3 px-3 text-left flex items-center">
+            <td className="border-b py-3 px-3 text-left">#1234</td>
+            <td className="border-b py-3 px-3 text-left flex items-center">
               <img src={dummyProductImage} alt="Product Image" className="h-14 border mr-3" />
              Bamboo Tooth brush
             </td>
-            <td className="py-3 px-3 text-left">Eco Product</td>
-            <td className="py-3 px-3 text-left">$300</td>
-            <td className="py-3 px-3 text-left font-bold">2</td>
-            <td className="py-3 px-3 text-left"> <span className="inline-block bg-blue-600 text-white rounded-md px-4 text- py-1">Pending</span> </td>
+            <td className="border-b py-3 px-3 text-left">Eco Product</td>
+            <td className="border-b py-3 px-3 text-left">$300</td>
+            <td className="border-b py-3 px-3 text-left font-bold">2</td>
+            <td className="border-b py-3 px-3 text-left"> <span className="inline-block bg-blue-600 text-white rounded-md px-4 text- py-1">Pending</span> </td>
           </tr>
           <tr>
-            <td className="py-3 px-3 text-left">#1234</td>
-            <td className="py-3 px-3 text-left flex items-center">
+            <td className="border-b py-3 px-3 text-left">#1234</td>
+            <td className="border-b py-3 px-3 text-left flex items-center">
               <img src={dummyFoodImage} alt="Product Image" className="h-14 border mr-3" />
               Coconut Oil
             </td>
-            <td className="py-3 px-3 text-left">Eco Food</td>
-            <td className="py-3 px-3 text-left">$300</td>
-            <td className="py-3 px-3 text-left font-bold">2</td>
-            <td className="py-3 px-3 text-left"> <span className="inline-block bg-green-600 text-white rounded-md px-4 text- py-1">Delivered</span> </td>
+            <td className="border-b py-3 px-3 text-left">Eco Food</td>
+            <td className="border-b py-3 px-3 text-left">$300</td>
+            <td className="border-b py-3 px-3 text-left font-bold">2</td>
+            <td className="border-b py-3 px-3 text-left"> <span className="inline-block bg-green-600 text-white rounded-md px-4 text- py-1">Delivered</span> </td>
           </tr>
           <tr>
-            <td className="py-3 px-3 text-left">#1234</td>
-            <td className="py-3 px-3 text-left flex items-center">
+            <td className="border-b py-3 px-3 text-left">#1234</td>
+            <td className="border-b py-3 px-3 text-left flex items-center">
               <img src={dummyProductImage} alt="Product Image" className="h-14 border mr-3" />
              Bamboo Tooth brush
             </td>
-            <td className="py-3 px-3 text-left">Eco Product</td>
-            <td className="py-3 px-3 text-left">$300</td>
-            <td className="py-3 px-3 text-left font-bold">2</td>
-            <td className="py-3 px-3 text-left"> <span className="inline-block bg-red-600 text-white rounded-md px-4 text- py-1">Canceled</span> </td>
+            <td className="border-b py-3 px-3 text-left">Eco Product</td>
+            <td className="border-b py-3 px-3 text-left">$300</td>
+            <td className="border-b py-3 px-3 text-left font-bold">2</td>
+            <td className="border-b py-3 px-3 text-left"> <span className="inline-block bg-red-600 text-white rounded-md px-4 text- py-1">Canceled</span> </td>
           </tr>
           <tr>
-            <td className="py-3 px-3 text-left">#1234</td>
-            <td className="py-3 px-3 text-left flex items-center">
+            <td className="border-b py-3 px-3 text-left">#1234</td>
+            <td className="border-b py-3 px-3 text-left flex items-center">
               <img src={dummyFoodImage} alt="Product Image" className="h-14 border mr-3" />
               Coconut Oil
             </td>
-            <td className="py-3 px-3 text-left">Eco Food</td>
-            <td className="py-3 px-3 text-left">$300</td>
-            <td className="py-3 px-3 text-left font-bold">2</td>
-            <td className="py-3 px-3 text-left"> <span className="inline-block bg-green-600 text-white rounded-md px-4 text- py-1">Delivered</span> </td>
+            <td className="border-b py-3 px-3 text-left">Eco Food</td>
+            <td className="border-b py-3 px-3 text-left">$300</td>
+            <td className="border-b py-3 px-3 text-left font-bold">2</td>
+            <td className="border-b py-3 px-3 text-left"> <span className="inline-block bg-green-600 text-white rounded-md px-4 text- py-1">Delivered</span> </td>
           </tr>
           <tr>
-            <td className="py-3 px-3 text-left">#1234</td>
-            <td className="py-3 px-3 text-left flex items-center">
+            <td className="border-b py-3 px-3 text-left">#1234</td>
+            <td className="border-b py-3 px-3 text-left flex items-center">
               <img src={dummyProductImage} alt="Product Image" className="h-14 border mr-3" />
              Bamboo Tooth brush
             </td>
-            <td className="py-3 px-3 text-left">Eco Product</td>
-            <td className="py-3 px-3 text-left">$300</td>
-            <td className="py-3 px-3 text-left font-bold">2</td>
-            <td className="py-3 px-3 text-left"> <span className="inline-block bg-blue-600 text-white rounded-md px-4 text- py-1">Pending</span> </td>
+            <td className="border-b py-3 px-3 text-left">Eco Product</td>
+            <td className="border-b py-3 px-3 text-left">$300</td>
+            <td className="border-b py-3 px-3 text-left font-bold">2</td>
+            <td className="border-b py-3 px-3 text-left"> <span className="inline-block bg-blue-600 text-white rounded-md px-4 text- py-1">Pending</span> </td>
           </tr>
           <tr>
-            <td className="py-3 px-3 text-left">#1234</td>
-            <td className="py-3 px-3 text-left flex items-center">
+            <td className="border-b py-3 px-3 text-left">#1234</td>
+            <td className="border-b py-3 px-3 text-left flex items-center">
               <img src={dummyFoodImage} alt="Product Image" className="h-14 border mr-3" />
               Coconut Oil
             </td>
-            <td className="py-3 px-3 text-left">Eco Food</td>
-            <td className="py-3 px-3 text-left">$300</td>
-            <td className="py-3 px-3 text-left font-bold">2</td>
-            <td className="py-3 px-3 text-left"> <span className="inline-block bg-green-600 text-white rounded-md px-4 text- py-1">Delivered</span> </td>
+            <td className="border-b py-3 px-3 text-left">Eco Food</td>
+            <td className="border-b py-3 px-3 text-left">$300</td>
+            <td className="border-b py-3 px-3 text-left font-bold">2</td>
+            <td className="border-b py-3 px-3 text-left"> <span className="inline-block bg-green-600 text-white rounded-md px-4 text- py-1">Delivered</span> </td>
           </tr>
           <tr>
-            <td className="py-3 px-3 text-left">#1234</td>
-            <td className="py-3 px-3 text-left flex items-center">
+            <td className="border-b py-3 px-3 text-left">#1234</td>
+            <td className="border-b py-3 px-3 text-left flex items-center">
               <img src={dummyProductImage} alt="Product Image" className="h-14 border mr-3" />
              Bamboo Tooth brush
             </td>
-            <td className="py-3 px-3 text-left">Eco Product</td>
-            <td className="py-3 px-3 text-left">$300</td>
-            <td className="py-3 px-3 text-left font-bold">2</td>
-            <td className="py-3 px-3 text-left"> <span className="inline-block bg-red-600 text-white rounded-md px-4 text- py-1">Canceled</span> </td>
+            <td className="border-b py-3 px-3 text-left">Eco Product</td>
+            <td className="border-b py-3 px-3 text-left">$300</td>
+            <td className="border-b py-3 px-3 text-left font-bold">2</td>
+            <td className="border-b py-3 px-3 text-left"> <span className="inline-block bg-red-600 text-white rounded-md px-4 text- py-1">Canceled</span> </td>
           </tr>
           
           
