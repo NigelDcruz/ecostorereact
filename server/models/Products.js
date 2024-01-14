@@ -10,6 +10,10 @@ const foodSchema = new Schema({
     type: Number,
     require: true,
   },
+  category: {
+    type: String,
+    required: true,
+  },
   image: {
     type: String,
   },
