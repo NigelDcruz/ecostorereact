@@ -1,11 +1,7 @@
 const { Schema, model } = require("mongoose");
-const Products = require("./Products");
+const Product = require("./Product");
 
 const orderSchema = new Schema({
-  appointmentDate: {
-    type: Date,
-    required: true,
-  },
   orderDate: {
     type: String,
     required: true,
@@ -26,13 +22,13 @@ const orderSchema = new Schema({
     },
     {
       type: Schema.Types.ObjectId,
-      ref: "Products",
+      ref: "Product",
     }
   ],
 });
 
-//Custom validation to ensure at least one service is selected.
-orderSchema.path("products").validate(function (value) {
+//Custom validation to ensure at least one product is selected.
+orderSchema.path("product").validate(function (value) {
   return value.length > 0;
 }, "Atleast one product must be selected for the order");
 
