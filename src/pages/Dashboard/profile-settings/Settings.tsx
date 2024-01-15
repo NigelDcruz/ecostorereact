@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import defaultProfileImage from "../../../assets/icons/defaultProfile.svg";
 import ProfileSection from "./ui/ProfileSection";
@@ -7,6 +7,13 @@ import UserAddress from "./UserAddress";
 
 const SettingsPage: React.FC = () => {
   const [profilePic, setprofilePic] = useState("");
+
+  useEffect(() => {
+    const profilePic = localStorage.getItem("profilePic");
+    if (profilePic) {
+      setprofilePic(profilePic);
+    }
+  }, []);
 
   return (
     <div className="grid grid-cols-12 m-4 mt-0 pt-4 h-full">

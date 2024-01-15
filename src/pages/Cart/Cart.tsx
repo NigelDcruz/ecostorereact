@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 const CartPage: React.FC = () => {
   const dummyFoodImage =
     "https://www.sowfresh.in/cdn/shop/products/coldpressedcoconutoil_1000ML_JAR_Front_1000x1000.jpg?v=1638624667";
-  const dummyProductImage =
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEzq5DzZOZjwX04OT32mWbUU9ESAcpPAVbXCRbdh8SOP1zEOzoH0f6Ol_1u4nBLcRoV7w&usqp=CAU";
-
   return (
     <div className="px-5 my-5 grid grid-cols-12 gap-5">
       <div className="col-span-8">

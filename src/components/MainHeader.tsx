@@ -2,7 +2,6 @@ import React from "react";
 import LogoIcon from "../assets/logo.svg";
 import userIcon from "../assets/icons/user.svg";
 import cartIcon from "../assets/icons/cart.svg";
-import notificationIcon from "../assets/icons/notification.svg";
 import { Link } from "react-router-dom";
 
 const MainHeader: React.FC = () => {
