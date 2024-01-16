@@ -1,6 +1,9 @@
-### Project Description
-![wireframe](https://github.com/NigelDcruz/ecostorereact/blob/master/src/assets/wireframe.png)
+### Eco Store Made with React + Typescript + TailwindCSS
 
+### Live Demo
+https://ecostorereact.netlify.app/
+
+### Project Description
 This project is a simple eco store web app based on the above wireframe.
 
 ### To run the project first clone the Repo and run the following commands
