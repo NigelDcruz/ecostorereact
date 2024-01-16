@@ -34,7 +34,7 @@ function App() {
           <Route path="profile-settings" element={<SettingsPage />} />
         </Route>
         {/* Product Routes */}
-        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/products/:type" element={<ProductsPage />} />
         <Route path="/product-detail/:id" element={<ProductDetail />} />
         {/* Cart Routes  */}
         <Route path="/cart" element={<CartPage />} />
