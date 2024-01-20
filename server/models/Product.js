@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const foodSchema = new Schema({
+const productSchema = new Schema({
   name:
     {
       type: String,
@@ -9,6 +9,10 @@ const foodSchema = new Schema({
   price: {
     type: Number,
     require: true,
+  },
+  category: {
+    type: String,
+    required: true,
   },
   image: {
     type: String,
@@ -19,6 +23,6 @@ const foodSchema = new Schema({
   },
 });
 
-const Food = model('Food', foodSchema);
+const Product = model('Product', productSchema);
 
-module.exports = Food;
+module.exports = Product;

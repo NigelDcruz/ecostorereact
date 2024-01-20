@@ -1,5 +1,5 @@
-const Selfcare  = require('./Appointment');
-const Food = require('./Services');
-const User = require('./Users');
+const Order = require ('./Order.js');
+const Product = require ('./Product.js');
+const User = require ('./User.js');
 
-module.exports = { Selfcare, Food, User }
+module.exports = { Order, Product, User };
