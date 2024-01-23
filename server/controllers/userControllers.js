@@ -55,6 +55,8 @@ const updateUser = async (req, res) => {
   }
 };
 
+//authentication needed, this is if a user wants to delete their profile.
+//if we want to implement this feature we would need to be able to delete their orders as well.
 const deleteUser = async (req, res) => {
   try {
     const deleteUser = await User.findByIdAndRemove(req.params._id);
