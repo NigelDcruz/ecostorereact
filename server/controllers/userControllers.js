@@ -1,9 +1,6 @@
 const User = require("../models/User");
 
 /*
-GET all users
-not posting users anywhere, just test on postman/insomnia
-
 GET a user (by id)
 need for when user is logged in
 
