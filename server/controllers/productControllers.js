@@ -16,3 +16,17 @@ ratings? maybe in the future as we work on the project
 DELETE a product (by id)
 user should not be authorized to delete products or edit there order
 */
+
+const getProducts = async (req, res) => {
+  try {
+    const products = await Product.find();
+    res.json(products);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Server error" });
+  }
+};
+
+module.exports = {
+  getProducts,
+}
