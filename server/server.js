@@ -1,9 +1,9 @@
 const express = require('express');
 const db = require('./config/connection');
 const getUsersRoutes = require('./routes/userRoutes');
-const { getProducts } = require('./controllers/productControllers');
+const getProducts = require('./routes/productRoutes');
 
-const PORT = 5173;
+const PORT = 5000;
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
@@ -20,7 +20,6 @@ app.get('/', async (req, res) => {
 });
 
 app.use('/users', getUsersRoutes);
-app.use('/', getProducts);
 
 db.once('open', () => {
   app.listen(PORT, () => {
