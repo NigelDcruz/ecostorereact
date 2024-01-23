@@ -11,6 +11,10 @@ const orderSchema = new Schema({
         type: String,
         required: true,
       },
+      qty: {
+        type: Number,
+        required: true,
+      },
       price: {
         type: Number,
         require: true,
