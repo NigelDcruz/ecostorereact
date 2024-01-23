@@ -2,6 +2,7 @@ const express = require('express');
 const db = require('./config/connection');
 const getUsersRoutes = require('./routes/userRoutes');
 const { getProducts } = require('./controllers/productControllers');
+const { getUserbyId } = require('./controllers/userControllers');
 
 const PORT = 5173;
 const app = express();
@@ -20,7 +21,8 @@ app.get('/', async (req, res) => {
 });
 
 app.use('/users', getUsersRoutes);
-app.use('/', getProducts);
+// app.use('/users/:id', getUserbyId);
+// app.use('/users/newUser', createUser);
 
 db.once('open', () => {
   app.listen(PORT, () => {

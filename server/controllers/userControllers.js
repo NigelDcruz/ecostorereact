@@ -1,15 +1,6 @@
 const User = require("../models/User");
 
 /*
-GET a user (by id)
-need for when user is logged in
-
-CREATE(post) a user
-when a user is registered
-
-UPDATE(put) a user (by id)
-when a user is logged in and wants to update their profile
-
 DELETE a user (by id)
 not using this anywhere yet, unless we want to have a user delete there own profile
 just testing for now
@@ -25,6 +16,61 @@ const getUsers = async (req, res) => {
   }
 };
 
+//needs authentication
+const getUserbyId = async (req, res) => {
+  try {
+    const user = await User.findById(req.params._id);
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+    res.json(user);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+//needs authentication, this is for the registration page
+const createUser = async (req, res) => {
+  try {
+    const userData = await User.create(req.body);
+    res.json(userData);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+//needs authentication, this is for the users profile page
+const updateUser = async (req, res) => {
+  try {
+    const newUserData = await User.findByIdAndUpdate(req.params._id, req.body, {
+      new: true,
+      runValidators: true,
+    });
+    if (!newUserData) {
+      return res.status(404).json({ error: "User not found" });
+    }
+    res.json(newUserData);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const deleteUser = async (req, res) => {
+  try {
+    const deleteUser = await User.findByIdAndRemove(req.params._id);
+  if(!deleteUser) {
+    return res.status(404).json({ message: 'No user with this id!'});
+  }
+  res.json('User successfully deleted!')
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 module.exports = {
   getUsers,
+  getUserbyId,
+  createUser,
+  updateUser,
+  deleteUser,
 };
