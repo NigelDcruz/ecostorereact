@@ -12,7 +12,6 @@ app.use(express.json());
 app.get('/', async (req, res) => {
   try {
     const products = await getProducts(req, res);
-    res.render('Welcome to the home page!', {products});
   } catch (error) {
     console.error(error);
     res.status(500).json({error: 'Server error'});
