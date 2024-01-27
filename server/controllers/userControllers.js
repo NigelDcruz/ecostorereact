@@ -60,10 +60,10 @@ const updateUser = async (req, res) => {
 const deleteUser = async (req, res) => {
   try {
     const deleteUser = await User.findByIdAndRemove(req.params._id);
-  if(!deleteUser) {
-    return res.status(404).json({ message: 'No user with this id!'});
-  }
-  res.json('User successfully deleted!')
+    if (!deleteUser) {
+      return res.status(404).json({ message: "No user with this id!" });
+    }
+    res.json("User successfully deleted!");
   } catch (error) {
     console.error(error);
   }
