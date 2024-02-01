@@ -15,7 +15,6 @@ const getProducts = async (req, res) => {
 
 // GET a product on an order and on the dashboard (by id)
 // Getting a product from an order, there should be a link attached to each product redirecting them to the single product.
-
 const getProductbyId = async (req, res) => {
   try {
     const product = await Product.findById(req.params._id);
@@ -41,7 +40,6 @@ const createProduct = async (req, res) => {
 
 // UPDATE(put) a product (by id)
 // ratings? maybe in the future as we work on the project
-
 const updateProduct = async (req, res) => {
   try {
     const newProductData = await Product.findByIdAndUpdate(
@@ -63,7 +61,6 @@ const updateProduct = async (req, res) => {
 
 // DELETE a product (by id)
 // user should not be authorized to delete products or edit there order
-
 const deleteProduct = async (req, res) => {
   try {
     const productUser = await Product.findByIdAndRemove(req.params._id);
