@@ -1,25 +1,14 @@
 const express = require("express");
 const router = express.Router();
-const userController = require("../controllers/userControllers");
+const funcs = require("../controllers/userControllers.js");
+const protect = require("../middleware/authMiddleware.js");
 
-router.get("/", userController.getUsers);
-router.get("/:_id", userController.getUserbyId);
-router.put("/:_id", userController.updateUser);
-router.delete("/:_id", userController.deleteUser);
-router.post("/newUser", userController.createUser);
-
-module.exports = router;
-
-router.get('/', userController.getUsers);
-
-//when a user logs in
-router.get('/:_id', userController.getUserbyId);
-
-
-router.put('/:_id', userController.updateUser);
-router.delete('/:_id', userController.deleteUser);
-
-//this should be the register route.
-router.post('/newUser', userController.createUser);
+router.post("/", funcs.registerUser);
+router.post("/login", funcs.authUser);
+router.post("/logout", funcs.logoutUser);
+router
+  .route("/profile")
+  .get(protect, funcs.getUserProfile)
+  .put(protect, funcs.updateUserProfile);
 
 module.exports = router;
