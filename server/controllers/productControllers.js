@@ -1,9 +1,10 @@
+const asyncHandler = require("../middleware/asyncHandler");
 const Product = require("../models/Product");
 
 // GET all products
 // on an order and on the dashboard
 
-const getProducts = async (req, res) => {
+const getProducts = asyncHandler(async (req, res) => {
   try {
     const products = await Product.find();
     res.json(products);
@@ -11,7 +12,7 @@ const getProducts = async (req, res) => {
     console.error(error);
     res.status(500).json({ error: "Server error" });
   }
-};
+});
 
 // GET a product on an order and on the dashboard (by id)
 // Getting a product from an order, there should be a link attached to each product redirecting them to the single product.
@@ -76,7 +77,4 @@ const deleteProduct = async (req, res) => {
 module.exports = {
   getProducts,
   getProductbyId,
-  createProduct,
-  updateProduct,
-  deleteProduct,
 };
