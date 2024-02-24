@@ -44,8 +44,7 @@ const createProduct = async (req, res) => {
 const updateProduct = async (req, res) => {
   try {
     const newProductData = await Product.findByIdAndUpdate(
-      req.params._id,
-      req.body,
+      req.body._id,
       {
         new: true,
         runValidators: true,
@@ -64,17 +63,19 @@ const updateProduct = async (req, res) => {
 // user should not be authorized to delete products or edit there order
 const deleteProduct = async (req, res) => {
   try {
-    const productUser = await Product.findByIdAndRemove(req.params._id);
-    if (!deleteProduct) {
+    const productUser = await Product.findByIdAndRemove(req.body._id);
+    if (!productUser) {
       return res.status(404).json({ message: "No product with this id!" });
     }
     res.json("Product successfully deleted!");
   } catch (error) {
-    console.error(error);
+    res.status(500).json({ error: error.message })
   }
 };
 
 module.exports = {
   getProducts,
   getProductbyId,
+  updateProduct,
+  deleteProduct,
 };

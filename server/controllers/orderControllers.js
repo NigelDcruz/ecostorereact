@@ -7,11 +7,8 @@ only when user is signed in
 
 */
 
-//needs authentication, should be on the orders history page
 const getOrders = async (req, res) => {
   try {
-    // const userId = req.body.user._id; change to req.user._id once we have authentication
-    // console.log(userId);
     const orders = await Order.find();
     console.log(orders);
     if (!orders) {
@@ -24,7 +21,7 @@ const getOrders = async (req, res) => {
   }
 };
 
-//needs authentication, should be clickable on the orders history page
+
 const getOrder = async (req, res) => {
   try {
     const order = await Order.findOne({ _id: req.params.orderId});
