@@ -29,7 +29,7 @@ function App() {
         {/* User Routes  */}
         <Route path="/dashboard" element={<DashboardPage />}>
           <Route path="" element={<Orders />} />
-          <Route path="orders" element={<Orders />} />
+          <Route path="/dashboard/orders" element={<Orders />} />
           <Route path="notifications" element={<NotificationsPage />} />
           <Route path="profile-settings" element={<SettingsPage />} />
         </Route>
