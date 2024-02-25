@@ -1,7 +1,10 @@
 import React from "react";
 import Button from "../../components/ui/Button";
+import { useParams } from "react-router-dom";
 
 const ProductDetail: React.FC = () => {
+  const { id } = useParams();
+
   const dummyFoodImage =
     "https://www.sowfresh.in/cdn/shop/products/coldpressedcoconutoil_1000ML_JAR_Front_1000x1000.jpg?v=1638624667";
 
@@ -10,6 +13,7 @@ const ProductDetail: React.FC = () => {
       <div className="col-span-6">
         <img src={dummyFoodImage} alt="Product " />
       </div>
+      {id}
       <div className="col-span-4 flex flex-col justify-center">
         <h1 className="font-medium text-xl">Product Title</h1>
         <p>

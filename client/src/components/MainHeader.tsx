@@ -3,8 +3,14 @@ import LogoIcon from "../assets/logo.svg";
 import userIcon from "../assets/icons/user.svg";
 import cartIcon from "../assets/icons/cart.svg";
 import { Link } from "react-router-dom";
+import notificationIcon from "../assets/icons/notification.svg";
+import { useCartSelector } from "../redux/hooks";
 
 const MainHeader: React.FC = () => {
+  const cartQuantity = useCartSelector((state) =>
+    state.cart.items.reduce((acc, curr) => acc + curr.quantity, 0)
+  );
+
   return (
     <header className="shadow-md py-3 flex justify-between items-center px-5">
       <div>
@@ -15,24 +21,26 @@ const MainHeader: React.FC = () => {
       </div>
       <nav>
         <ul className="flex gap-5">
-         
-          {/* <li>
+          <li>
             <Link
               to="/notifications"
               className="text-sm font-semibold leading-6  text-green-600 flex gap-2 relative"
             >
               <img src={notificationIcon} alt="Cart Icon" className="h-7 w-6" />
-              <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">1</span>
-
+              <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
+                1
+              </span>
             </Link>
-          </li> */}
+          </li>
           <li>
             <Link
               to="/cart"
               className="text-sm font-semibold leading-6  text-green-600 flex gap-2 relative"
             >
               <img src={cartIcon} alt="Cart Icon" className="h-7 w-7" />
-              <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">9</span>
+              <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
+                {cartQuantity}
+              </span>
             </Link>
           </li>
           <li className="relative group cursor-pointer">
