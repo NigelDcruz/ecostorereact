@@ -1,21 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../../components/ui/Button";
 import { useParams } from "react-router-dom";
+import { ProductCardProps } from "../../components/cards/ProductCard";
+import { Products } from "../../DummyProducts";
 
 const ProductDetail: React.FC = () => {
-  const { id } = useParams();
+  const { id: prodId } = useParams();
+  const prod = Products[0].find((x) => x.id === prodId);
+  console.log(prod);
 
-  const dummyFoodImage =
-    "https://www.sowfresh.in/cdn/shop/products/coldpressedcoconutoil_1000ML_JAR_Front_1000x1000.jpg?v=1638624667";
+  // const [prod, setprod] = React.useState<ProductCardProps>();
+  // const params= useParams();
+  // useEffect(() => {
+  //   const url = `http://localhost:5173/product-detail/${params.id}`;
+  //   fetch(url)
+  //     .then((res) => res.json())
+  //     .then((data) => setprod(data));
+  //   console.log("params", params);
+  // }, [params]);
 
   return (
     <div className="p-5 grid grid-cols-12">
       <div className="col-span-6">
-        <img src={dummyFoodImage} alt="Product " />
+        <img alt="Product " />
+        {prod?.id}
+        {prod?.title}
       </div>
-      {id}
       <div className="col-span-4 flex flex-col justify-center">
-        <h1 className="font-medium text-xl">Product Title</h1>
+        <h1 className="font-medium text-xl">title</h1>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, maxime
           aperiam corporis necessitatibus magni architecto asperiores nulla aut

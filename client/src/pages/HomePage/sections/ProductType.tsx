@@ -8,16 +8,11 @@ export interface ProductTypeProps {
   description: string;
   productType: string;
 }
-
 const ProductType: React.FC<ProductTypeProps> = ({
   name,
   description,
   productType,
 }) => {
-  // const dummyFoodImage =
-  //  "https://www.sowfresh.in/cdn/shop/products/coldpressedcoconutoil_1000ML_JAR_Front_1000x1000.jpg?v=1638624667";
-  // const dummyProductImage =
-  //   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEzq5DzZOZjwX04OT32mWbUU9ESAcpPAVbXCRbdh8SOP1zEOzoH0f6Ol_1u4nBLcRoV7w&usqp=CAU";
   return (
     <>
       <div className="md:flex md:justify-between px-5">
@@ -35,9 +30,13 @@ const ProductType: React.FC<ProductTypeProps> = ({
         </div>
       </div>
       <div className="flex p-5 flex-wrap gap-6">
+        {/* {Products[0].map((x) => (
+          <div>{x.price}</div>
+        ))} */}
         {productType === "EcoFood"
-          ? Products.Food.map((item) => (
+          ? Products[0].map((item) => (
               <ProductCard
+                key={item.id}
                 id={item.id}
                 image={item.image}
                 title={item.title}
@@ -45,8 +44,9 @@ const ProductType: React.FC<ProductTypeProps> = ({
                 description={item.description}
               />
             ))
-          : Products.Goods.map((item) => (
+          : Products[1].map((item) => (
               <ProductCard
+                key={item.id}
                 id={item.id}
                 image={item.image}
                 title={item.title}

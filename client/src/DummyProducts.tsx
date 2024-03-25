@@ -11,8 +11,8 @@ import soap from "./assets/images/soap.webp";
 import toys from "./assets/images/toys.jpg";
 import dental from "./assets/images/dental.webp";
 
-export const Products = {
-  Food: [
+export const Products = [
+  [
     {
       id: 1,
       image: apple,
@@ -62,7 +62,7 @@ export const Products = {
         "Organic bread uses at least 95 percent organic ingredients. None of it should be made from a genetically modified organism (GMO). ",
     },
   ],
-  Goods: [
+  [
     {
       id: 1,
       image: soap,
@@ -112,4 +112,4 @@ export const Products = {
         "Non-toxic, No Paraffin, Petroleum Wax or Animal-derived Wax: We’ve done away with the harsh chemicals and formulated a unique, plant-based formula to create better and safer natural crayons",
     },
   ],
-};
+];

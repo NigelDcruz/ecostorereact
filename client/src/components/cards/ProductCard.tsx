@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 import { useCartDispatch } from "../../redux/hooks";
 import { Add } from "../../redux/cart-slice";
 
-interface ProductCardProps {
+export type ProductCardProps = {
   id: number;
   image: string;
   price: number;
   title: string;
   description: string;
-}
+};
 
 const ProductCard: React.FC<ProductCardProps> = ({
   id,
