@@ -14,11 +14,20 @@ const HomePage: React.FC = () => {
 
           <FilterProducts />
         </section>
+
         <section className="mb-5 border-y py-5 shadow-lg">
-          <ProductType name={"Eco Food"} description={"All types of Eco Food"} productType="EcoFood"/>
+          <ProductType
+            name={"Eco Food"}
+            description={"All types of Eco Food"}
+            productType="EcoFood"
+          />
         </section>
         <section className=" border-b py-5 shadow-lg mb-2">
-          <ProductType name={"Eco Products"} description={"All types of Eco Products"} productType="EcoProduct" />
+          <ProductType
+            name={"Eco Products"}
+            description={"All types of Eco Products"}
+            productType="EcoProduct"
+          />
         </section>
       </main>
     </>

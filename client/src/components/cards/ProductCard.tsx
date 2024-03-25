@@ -1,16 +1,32 @@
 import React, { useState } from "react";
 import Button from "../ui/Button";
-
 import heartBlackIcon from "../../assets/icons/heart-black.svg";
 import heartRedIcon from "../../assets/icons/heart-red.svg";
 import { Link } from "react-router-dom";
+import { useCartDispatch } from "../../redux/hooks";
+import { Add } from "../../redux/cart-slice";
 
-interface ProductCardProps {
-  productImage: string;
-}
+export type ProductCardProps = {
+  id: number;
+  image: string;
+  price: number;
+  title: string;
+  description: string;
+};
 
-const ProductCard: React.FC<ProductCardProps> = ({ productImage }) => {
+const ProductCard: React.FC<ProductCardProps> = ({
+  id,
+  image,
+  price,
+  title,
+  description,
+}) => {
   const [isFavourite, setIsFavourite] = useState(false);
+  const dispatch = useCartDispatch();
+
+  function handleAddToCart() {
+    dispatch(Add({ id, image, title, price, description }));
+  }
 
   return (
     <div className="bg-white rounded-lg shadow-md p-4 w-full md:w-[300px] border relative">
@@ -29,12 +45,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ productImage }) => {
           onClick={() => setIsFavourite(true)}
         />
       )}
-      <Link to="/product-detail/productID">
-        <img src={productImage} alt="Product Image" className="w-full mb-4" />
+      <Link to={`product-detail/${id}`}>
+        <img src={image} alt="Product Image" className="w-full mb-4" />
         <div className="flex cont justify-between">
-          <h2 className="text-lg font-semibold mb-2">Product Title</h2>
+          <h2 className="text-lg font-semibold mb-2">{title}</h2>
           <p className="text-gray-600 font-medium">
-            $19.99 <span className="text-xs text-gray-400">(18% off)</span>
+            $ {price} <span className="text-xs text-gray-400">(18% off)</span>
           </p>
         </div>
         <div className="flex items-center mb-2">
@@ -56,7 +72,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ productImage }) => {
             <option value="5">5</option>
           </select>
         </div>
-        <Button>Add to cart</Button>
+        <Button onClick={handleAddToCart}>Add to cart</Button>
       </div>
     </div>
   );

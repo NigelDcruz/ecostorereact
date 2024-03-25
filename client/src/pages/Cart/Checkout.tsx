@@ -1,7 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useCartSelector } from "../../redux/hooks";
 
 const CheckOutPage: React.FC = () => {
+  const cartItems = useCartSelector((state) => state.cart.items);
+  const cartSubtotal = cartItems.reduce(
+    (acc, curr) => acc + curr.price * curr.quantity,
+    0
+  );
+  let Total = cartSubtotal;
+  if (cartSubtotal > 1) {
+    Total += 50;
+  } else {
+    Total = 0;
+  }
   return (
     <div className="px-5 my-5 grid grid-cols-12 gap-5">
       <div className="col-span-5">
@@ -83,7 +95,10 @@ const CheckOutPage: React.FC = () => {
         </form>
         <h2 className="font-medium text-xl mb-4 mt-5">Payment Method</h2>
         <form className="border p-5">
-          <label htmlFor="cashOnDelivery" className="flex items-center cursor-pointer">
+          <label
+            htmlFor="cashOnDelivery"
+            className="flex items-center cursor-pointer"
+          >
             Cash on Delivery
             <input
               type="checkbox"
@@ -101,13 +116,13 @@ const CheckOutPage: React.FC = () => {
             Order Summary
           </h2>
           <p className="mb-1 text-lg">
-            <span className="font-medium ">Total:</span> $300
+            <span className="font-medium ">Subtotal:</span> ${cartSubtotal}
           </p>
           <p className="mb-1 text-lg">
             <span className="font-medium ">Delivery:</span> $50
           </p>
           <p className="mb-1 text-lg">
-            <span className="font-medium ">Subtotal:</span> $250
+            <span className="font-medium ">Total:</span> ${Total}
           </p>
           <Link
             to="/confirmation"
