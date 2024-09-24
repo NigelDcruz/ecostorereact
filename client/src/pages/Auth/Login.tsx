@@ -4,7 +4,7 @@ import Button from "../../components/ui/Button";
 const LoginPage: React.FC = () => {
     
     const handleLogin = () => { 
-        // console.log("Login");
+        console.log("Login");
         
     }
   return (
